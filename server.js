@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:room', (req, res) => {
-    res.render('index', { roomId: req.params.room})
+    res.render('room', { roomId: req.params.room})
 })
 
 
@@ -42,6 +42,6 @@ io.on('connection', socket => {
 
 
 
-server.listen(443, () => {
-    console.log("Server running port 443");
+server.listen(3000, () => {
+    console.log("Server running port 3000");
 });
